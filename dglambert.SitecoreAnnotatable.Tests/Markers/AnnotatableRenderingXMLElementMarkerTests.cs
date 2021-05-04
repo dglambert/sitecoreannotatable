@@ -8,7 +8,7 @@ namespace dglambert.SitecoreAnnotatable.Tests.Markers
 {
     [ExcludeFromCodeCoverage]
     [TestClass]
-    public class AnnotatableXMLElementMarkerTests
+    public class AnnotatableRenderingXMLElementMarkerTests
     {
         [TestMethod]
         public void CTOR_Valid()
@@ -18,7 +18,7 @@ namespace dglambert.SitecoreAnnotatable.Tests.Markers
             string providedDataSource = null;
 
             //Act
-            IMarker actualMarker = new AnnotatableXMLElementMarker(providedRenderingName, providedDataSource);
+            IMarker actualMarker = new AnnotatableRenderingXMLElementMarker(providedRenderingName, providedDataSource);
 
             //Assert
             Assert.IsNotNull(actualMarker);
@@ -34,7 +34,7 @@ namespace dglambert.SitecoreAnnotatable.Tests.Markers
             string providedDataSource = null;
 
             //Act
-            _ = new AnnotatableXMLElementMarker(providedRenderingName, providedDataSource);
+            _ = new AnnotatableRenderingXMLElementMarker(providedRenderingName, providedDataSource);
 
             //Assert
 
@@ -49,7 +49,7 @@ namespace dglambert.SitecoreAnnotatable.Tests.Markers
             string providedDataSource = null;
 
             //Act
-            _ = new AnnotatableXMLElementMarker(providedRenderingName, providedDataSource);
+            _ = new AnnotatableRenderingXMLElementMarker(providedRenderingName, providedDataSource);
 
             //Assert
         }
@@ -63,7 +63,7 @@ namespace dglambert.SitecoreAnnotatable.Tests.Markers
             string expectedStartString = $"<rendering data-rendering-name=\"{providedRenderingName}\" data-data-source=\"\">";
 
             //Act
-            IMarker actualMarker = new AnnotatableXMLElementMarker(providedRenderingName, providedDataSource);
+            IMarker actualMarker = new AnnotatableRenderingXMLElementMarker(providedRenderingName, providedDataSource);
 
             //Assert
 
@@ -79,7 +79,7 @@ namespace dglambert.SitecoreAnnotatable.Tests.Markers
             string expectedStartString = $"<rendering data-rendering-name=\"{providedRenderingName}\" data-data-source=\"{providedDataSource}\">";
 
             //Act
-            IMarker actualMarker = new AnnotatableXMLElementMarker(providedRenderingName, providedDataSource);
+            IMarker actualMarker = new AnnotatableRenderingXMLElementMarker(providedRenderingName, providedDataSource);
 
             //Assert
             Assert.AreEqual(expectedStartString, actualMarker.GetStart());
@@ -94,7 +94,7 @@ namespace dglambert.SitecoreAnnotatable.Tests.Markers
             string expectedStartString = $"</rendering>";
 
             //Act
-            IMarker actualMarker = new AnnotatableXMLElementMarker(providedRenderingName, providedDataSource);
+            IMarker actualMarker = new AnnotatableRenderingXMLElementMarker(providedRenderingName, providedDataSource);
 
             //Assert
             Assert.AreEqual(expectedStartString, actualMarker.GetEnd());
