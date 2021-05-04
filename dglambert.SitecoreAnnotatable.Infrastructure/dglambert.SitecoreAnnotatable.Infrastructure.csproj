@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\IRenderingMarkerFactory.cs" />
+    <Compile Include="Factories\RenderingMarkerFactory.cs" />
     <Compile Include="Markers\AnnotatableRenderingXMLElementMarker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
