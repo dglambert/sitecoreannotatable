@@ -5,19 +5,24 @@ namespace dglambert.SitecoreAnnotatable.Infrastructure.Markers
 {
     public class AnnotatableXMLElementMarker : IMarker
     {
-        public AnnotatableXMLElementMarker(string renderingName, string dataSource)
-        {
+        string _renderingName;
+        string _dataSource;
 
+        public AnnotatableXMLElementMarker(string renderingName, string dataSource = "")
+        {
+            _renderingName = renderingName ?? throw new ArgumentNullException("renderingName must be a non-null value.");
+            _renderingName = renderingName.Trim().Length > 0 ? renderingName : throw new ArgumentException("renderingName must be a non-whitespace value.");
+            _dataSource = dataSource;
         }
 
         public string GetStart()
         {
-            throw new NotImplementedException();
+            return $"<rendering data-rendering-name=\"{_renderingName}\" data-data-source=\"{_dataSource}\">";
         }
 
         public string GetEnd()
         {
-            throw new NotImplementedException();
+            return "</rendering>";
         }
     }
 }
