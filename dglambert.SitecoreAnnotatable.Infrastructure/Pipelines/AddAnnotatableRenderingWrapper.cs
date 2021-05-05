@@ -1,4 +1,5 @@
 ﻿using dglambert.SitecoreAnnotatable.Infrastructure.Factories;
+using dglambert.SitecoreAnnotatable.Infrastructure.Wrappers;
 using Sitecore.Mvc.ExperienceEditor.Presentation;
 using Sitecore.Mvc.Pipelines.Response.RenderRendering;
 using System;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dglambert.SitecoreAnnotatable.Infrastructure.Wrappers
+namespace dglambert.SitecoreAnnotatable.Infrastructure.Pipelines
 {
     public class AddAnnotatableRenderingWrapper : RenderRenderingProcessor
     {

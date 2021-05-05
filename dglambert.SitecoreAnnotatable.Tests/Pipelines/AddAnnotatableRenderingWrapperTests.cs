@@ -1,4 +1,5 @@
 ﻿using dglambert.SitecoreAnnotatable.Infrastructure.Factories;
+using dglambert.SitecoreAnnotatable.Infrastructure.Pipelines;
 using dglambert.SitecoreAnnotatable.Infrastructure.Wrappers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -9,7 +10,7 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
-namespace dglambert.SitecoreAnnotatable.Tests.Wrappers
+namespace dglambert.SitecoreAnnotatable.Tests.Pipelines
 {
     [ExcludeFromCodeCoverage]
     [TestClass]
