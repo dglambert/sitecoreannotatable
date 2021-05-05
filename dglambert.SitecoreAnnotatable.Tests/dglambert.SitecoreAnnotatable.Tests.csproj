@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Factories\RenderingMarkerFactoryTests.cs" />
     <Compile Include="Markers\AnnotatableRenderingXMLElementMarkerTests.cs" />
+    <Compile Include="Pipelines\EndAllRenderingWrappersTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pipelines\AddAnnotatableRenderingWrapperTests.cs" />
     <Compile Include="Wrappers\AnnotatableRenderingWrapperTests.cs" />

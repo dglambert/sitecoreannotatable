@@ -51,6 +51,7 @@
     <Compile Include="Factories\RenderingMarkerFactory.cs" />
     <Compile Include="Markers\AnnotatableRenderingXMLElementMarker.cs" />
     <Compile Include="Markers\RenderingMarker.cs" />
+    <Compile Include="Pipelines\EndAllRenderingWrappers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pipelines\AddAnnotatableRenderingWrapper.cs" />
     <Compile Include="Wrappers\AnnotatableRenderingWrapper.cs" />
