@@ -3,11 +3,8 @@ using System;
 
 namespace dglambert.SitecoreAnnotatable.Infrastructure.Markers
 {
-    public class AnnotatableRenderingXMLElementMarker : IMarker
+    public class AnnotatableRenderingXMLElementMarker : RenderingMarker
     {
-        string _renderingName;
-        string _dataSource;
-
         public AnnotatableRenderingXMLElementMarker(string renderingName, string dataSource = "")
         {
             _renderingName = renderingName ?? throw new ArgumentNullException("renderingName must be a non-null value.");
@@ -15,12 +12,12 @@ namespace dglambert.SitecoreAnnotatable.Infrastructure.Markers
             _dataSource = dataSource;
         }
 
-        public string GetStart()
+        public override string GetStart()
         {
             return $"<rendering data-rendering-name=\"{_renderingName}\" data-data-source=\"{_dataSource}\">";
         }
 
-        public string GetEnd()
+        public override string GetEnd()
         {
             return "</rendering>";
         }
