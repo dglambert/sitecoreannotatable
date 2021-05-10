@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Kernel.NoReferences.8.2.180406\lib\NET452\Sitecore.Kernel.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Mvc, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Mvc.NoReferences.8.2.180406\lib\NET452\Sitecore.Mvc.dll</HintPath>
     </Reference>
@@ -54,6 +57,8 @@
     <Compile Include="Pipelines\EndAllRenderingWrappers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pipelines\AddAnnotatableRenderingWrapper.cs" />
+    <Compile Include="Services\ContentService.cs" />
+    <Compile Include="Services\IContentService.cs" />
     <Compile Include="Wrappers\AnnotatableRenderingWrapper.cs" />
   </ItemGroup>
   <ItemGroup>

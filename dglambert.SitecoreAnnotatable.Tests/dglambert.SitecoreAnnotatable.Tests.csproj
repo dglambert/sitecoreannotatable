@@ -76,6 +76,7 @@
     <Compile Include="Pipelines\EndAllRenderingWrappersTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pipelines\AddAnnotatableRenderingWrapperTests.cs" />
+    <Compile Include="Services\ContentServiceTests.cs" />
     <Compile Include="Wrappers\AnnotatableRenderingWrapperTests.cs" />
   </ItemGroup>
   <ItemGroup>
