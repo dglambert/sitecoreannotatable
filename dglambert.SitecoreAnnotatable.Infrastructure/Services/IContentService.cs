@@ -8,5 +8,6 @@ namespace dglambert.SitecoreAnnotatable.Infrastructure.Services
 {
     public interface IContentService
     {
+        string GetDataSourceItemPath(Guid id);
     }
 }
