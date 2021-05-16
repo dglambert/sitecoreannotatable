@@ -62,6 +62,7 @@
     <Compile Include="Wrappers\AnnotatableRenderingWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App_Config\Include\Dglambert.SitecoreAnnotatable.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
