@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/dglambert/sitecoreannotatable</projectUrl>
+    <description>$description$</description>
+    <releaseNotes>
+      v 1.0.0 
+      - Initial Release 
+    </releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>Sitecore Annotation Annotate Markup Renderings</tags>
+  </metadata>
+</package>

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("dglambert.SitecoreAnnotatable.Infrastructure")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("dglambert.SitecoreAnnotatable")]
+[assembly: AssemblyDescription("A Library for automatically adding annotations to the markup of Sitecore Websites.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("dglambert.SitecoreAnnotatable.Infrastructure")]
+[assembly: AssemblyCompany("Devin Gleason-Lambert")]
+[assembly: AssemblyProduct("dglambert.SitecoreAnnotatable")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
