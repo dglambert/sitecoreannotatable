@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package >
+<package>
   <metadata>
     <id>$id$</id>
-    <version>$version$</version>
+    <version>1.0.0</version>
     <title>$title$</title>
     <authors>$author$</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -16,4 +16,7 @@
     <copyright>$copyright$</copyright>
     <tags>Sitecore Annotation Annotate Markup Renderings</tags>
   </metadata>
+  <files>
+    <file src="App_Config\Include\Dglambert.SitecoreAnnotatable.config" target="content\App_Config\Include" />
+  </files>
 </package>
