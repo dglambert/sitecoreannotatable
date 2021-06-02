@@ -1,6 +1,6 @@
 ﻿using dglambert.SitecoreAnnotatable.Infrastructure.Factories;
 using dglambert.SitecoreAnnotatable.Infrastructure.Markers;
-using dglambert.SitecoreAnnotatable.Infrastructure.Services;
+using dglambert.SitecoreAnnotatable.Infrastructure.Queries;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Sitecore.Mvc.ExperienceEditor.Presentation;
@@ -18,10 +18,10 @@ namespace dglambert.SitecoreAnnotatable.Tests.Factories
         public void CTOR_Valid()
         {
             //Arrange
-            IContentService providedContentService = null;
+            IGetDataSourceQuery providedGetDataSourceQuery = null;
 
             //Act
-            RenderingMarkerFactory actualRenderingMarkerFactory = new RenderingMarkerFactory(providedContentService);
+            RenderingMarkerFactory actualRenderingMarkerFactory = new RenderingMarkerFactory(providedGetDataSourceQuery);
 
             //Assert
             Assert.IsNotNull(actualRenderingMarkerFactory);
@@ -32,10 +32,10 @@ namespace dglambert.SitecoreAnnotatable.Tests.Factories
         {
             //Arrange
             string providedDataSource = "thisDataSource";
-            Mock<IContentService> mockContentService = new Mock<IContentService>();
-            mockContentService.Setup(i => i.GetDataSourceItemPath(It.IsAny<Guid>())).Returns(providedDataSource);
-            IContentService providedContentService = mockContentService.Object;
-            RenderingMarkerFactory providedRenderingMarkerFactory = new RenderingMarkerFactory(providedContentService);
+            Mock<IGetDataSourceQuery> mockGetDataSourceQuery = new Mock<IGetDataSourceQuery>();
+            mockGetDataSourceQuery.Setup(i => i.GetDataSourceItemPath(It.IsAny<Guid>())).Returns(providedDataSource);
+            IGetDataSourceQuery providedGetDataSourceQuery = mockGetDataSourceQuery.Object;
+            RenderingMarkerFactory providedRenderingMarkerFactory = new RenderingMarkerFactory(providedGetDataSourceQuery);
             Rendering providedRendering = new Rendering();
             providedRendering.DataSource = providedDataSource;
             ControllerRenderer providedRenderer = new ControllerRenderer();
@@ -59,10 +59,10 @@ namespace dglambert.SitecoreAnnotatable.Tests.Factories
         {
             //Arrange
             string providedDataSource = "thisDataSource";
-            Mock<IContentService> mockContentService = new Mock<IContentService>();
-            mockContentService.Setup(i => i.GetDataSourceItemPath(It.IsAny<Guid>())).Returns(providedDataSource);
-            IContentService providedContentService = mockContentService.Object;
-            RenderingMarkerFactory providedRenderingMarkerFactory = new RenderingMarkerFactory(providedContentService);
+            Mock<IGetDataSourceQuery> mockGetDataSourceQuery = new Mock<IGetDataSourceQuery>();
+            mockGetDataSourceQuery.Setup(i => i.GetDataSourceItemPath(It.IsAny<Guid>())).Returns(providedDataSource);
+            IGetDataSourceQuery providedGetDataSourceQuery = mockGetDataSourceQuery.Object;
+            RenderingMarkerFactory providedRenderingMarkerFactory = new RenderingMarkerFactory(providedGetDataSourceQuery);
             Rendering providedRendering = new Rendering();
             providedRendering.DataSource = providedDataSource;
             ViewRenderer providedRenderer = new ViewRenderer();
@@ -86,10 +86,10 @@ namespace dglambert.SitecoreAnnotatable.Tests.Factories
             //Arrange
             string providedDataSource = Guid.NewGuid().ToString();
             string expectedDataSource = "Not a Guid";
-            Mock<IContentService> mockContentService = new Mock<IContentService>();
-            mockContentService.Setup(i => i.GetDataSourceItemPath(It.IsAny<Guid>())).Returns(expectedDataSource);
-            IContentService providedContentService = mockContentService.Object;
-            RenderingMarkerFactory providedRenderingMarkerFactory = new RenderingMarkerFactory(providedContentService);
+            Mock<IGetDataSourceQuery> mockGetDataSourceQuery = new Mock<IGetDataSourceQuery>();
+            mockGetDataSourceQuery.Setup(i => i.GetDataSourceItemPath(It.IsAny<Guid>())).Returns(expectedDataSource);
+            IGetDataSourceQuery providedGetDataSourceQuery = mockGetDataSourceQuery.Object;
+            RenderingMarkerFactory providedRenderingMarkerFactory = new RenderingMarkerFactory(providedGetDataSourceQuery);
             Rendering providedRendering = new Rendering();
             providedRendering.DataSource = providedDataSource;
             ViewRenderer providedRenderer = new ViewRenderer();
@@ -113,8 +113,8 @@ namespace dglambert.SitecoreAnnotatable.Tests.Factories
         public void Create_NullRendering_ThrowsException()
         {
             //Arrange
-            IContentService providedContentService = null;
-            RenderingMarkerFactory providedRenderingMarkerFactory = new RenderingMarkerFactory(providedContentService);
+            IGetDataSourceQuery providedGetDataSourceQuery = null;
+            RenderingMarkerFactory providedRenderingMarkerFactory = new RenderingMarkerFactory(providedGetDataSourceQuery);
             Rendering providedRendering = null;
 
             //Act

@@ -35,7 +35,7 @@ For information about configuring, see the [Getting Started](https://github.com/
 
 ### Setting up Dependencies
 
-In your IOC container, you will need to register two additional services, `IContentService` and `IRenderingMakerFactory`. 
+In your IOC container, you will need to register two additional services, `IGetDataSourceQuery` and `IRenderingMakerFactory`. 
 
 ```csharp
     public class RegisterDependencies : IServicesConfigurator
@@ -44,7 +44,7 @@ In your IOC container, you will need to register two additional services, `ICont
         {
             Database database = Glass.Mapper.Sc.IoC.SitecoreContextFactory.Default.GetSitecoreContext().Database;
 
-            serviceCollection.AddSingleton<dglambert.SitecoreAnnotatable.Infrastructure.Services.IContentService>(service => new dglambert.SitecoreAnnotatable.Infrastructure.Services.ContentService(database));
+            serviceCollection.AddSingleton<dglambert.SitecoreAnnotatable.Infrastructure.Queries.IGetDataSourceQuery>(service => new dglambert.SitecoreAnnotatable.Infrastructure.Queries.GetDataSourceQuery(database));
             serviceCollection.AddSingleton<dglambert.SitecoreAnnotatable.Infrastructure.Factories.IRenderingMarkerFactory, dglambert.SitecoreAnnotatable.Infrastructure.Factories.RenderingMarkerFactory>();
         }
     }

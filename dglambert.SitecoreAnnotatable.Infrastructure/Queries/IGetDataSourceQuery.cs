@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dglambert.SitecoreAnnotatable.Infrastructure.Services
+namespace dglambert.SitecoreAnnotatable.Infrastructure.Queries
 {
-    public interface IContentService
+    public interface IGetDataSourceQuery
     {
         string GetDataSourceItemPath(Guid id);
     }

@@ -2,12 +2,12 @@
 using Sitecore.Data;
 using Sitecore.Data.Items;
 
-namespace dglambert.SitecoreAnnotatable.Infrastructure.Services
+namespace dglambert.SitecoreAnnotatable.Infrastructure.Queries
 {
-    public class ContentService : IContentService
+    public class GetDataSourceQuery : IGetDataSourceQuery
     {
         Database _database;
-        public ContentService(Database database)
+        public GetDataSourceQuery(Database database)
         {
             _database = database ?? throw new ArgumentNullException("database must be a non-null value.");
         }

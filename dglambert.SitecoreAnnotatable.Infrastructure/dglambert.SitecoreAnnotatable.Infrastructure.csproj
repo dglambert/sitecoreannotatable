@@ -58,8 +58,8 @@
     <Compile Include="Pipelines\EndAllRenderingWrappers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pipelines\AddAnnotatableRenderingWrapper.cs" />
-    <Compile Include="Services\ContentService.cs" />
-    <Compile Include="Services\IContentService.cs" />
+    <Compile Include="Queries\GetDataSourceQuery.cs" />
+    <Compile Include="Queries\IGetDataSourceQuery.cs" />
     <Compile Include="Wrappers\AnnotatableRenderingWrapper.cs" />
   </ItemGroup>
   <ItemGroup>

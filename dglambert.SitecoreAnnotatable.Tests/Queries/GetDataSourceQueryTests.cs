@@ -2,16 +2,16 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using Sitecore.Data;
-using dglambert.SitecoreAnnotatable.Infrastructure.Services;
+using dglambert.SitecoreAnnotatable.Infrastructure.Queries;
 using Moq;
 using Sitecore.Data.Items;
 using Sitecore.Globalization;
 
-namespace dglambert.SitecoreAnnotatable.Tests.Services
+namespace dglambert.SitecoreAnnotatable.Tests.Queries
 {
     [ExcludeFromCodeCoverage]
     [TestClass]
-    public class ContentServiceTests
+    public class GetDataSourceQueryTests
     {
         [TestMethod]
         public void CTOR_Valid()
@@ -21,10 +21,10 @@ namespace dglambert.SitecoreAnnotatable.Tests.Services
             Database providedDatabase = mockDB.Object;
 
             //Act
-            IContentService actualContentService = new ContentService(providedDatabase);
+            IGetDataSourceQuery actualGetDataSourceQuery = new GetDataSourceQuery(providedDatabase);
 
             //Assert
-            Assert.IsNotNull(actualContentService);
+            Assert.IsNotNull(actualGetDataSourceQuery);
         }
 
         [ExpectedException(typeof(ArgumentNullException))]
@@ -35,10 +35,10 @@ namespace dglambert.SitecoreAnnotatable.Tests.Services
             Database providedDatabase = null;
             
             //Act
-            IContentService actualContentService = new ContentService(providedDatabase);
+            IGetDataSourceQuery actualGetDataSourceQuery = new GetDataSourceQuery(providedDatabase);
 
             //Assert
-            Assert.IsNotNull(actualContentService);
+            Assert.IsNotNull(actualGetDataSourceQuery);
         }
 
         [TestMethod]
@@ -65,10 +65,10 @@ namespace dglambert.SitecoreAnnotatable.Tests.Services
 
             mockDB.Setup(i => i.GetItem(It.IsAny<ID>())).Returns(providedItem);
             
-            IContentService providedContentService = new ContentService(providedDatabase);
+            IGetDataSourceQuery providedGetDataSourceQuery = new GetDataSourceQuery(providedDatabase);
 
             //Act
-            string actualItemPath = providedContentService.GetDataSourceItemPath(Guid.NewGuid());
+            string actualItemPath = providedGetDataSourceQuery.GetDataSourceItemPath(Guid.NewGuid());
 
             //Assert
             Assert.AreEqual(expectedItemPath, actualItemPath);
@@ -86,10 +86,10 @@ namespace dglambert.SitecoreAnnotatable.Tests.Services
 
             mockDB.Setup(i => i.GetItem(It.IsAny<ID>())).Returns(providedItem);
 
-            IContentService providedContentService = new ContentService(providedDatabase);
+            IGetDataSourceQuery providedGetDataSourceQuery = new GetDataSourceQuery(providedDatabase);
 
             //Act
-            string actualItemPath = providedContentService.GetDataSourceItemPath(Guid.NewGuid());
+            string actualItemPath = providedGetDataSourceQuery.GetDataSourceItemPath(Guid.NewGuid());
 
             //Assert
             Assert.AreEqual(expectedItemPath, actualItemPath);
