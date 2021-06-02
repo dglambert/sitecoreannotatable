@@ -1,9 +1,9 @@
 # SitecoreAnnotatable
 A Library for automatically adding annotations to the markup of Sitecore Websites.
 
-- [About this Project](#about-the-project)
-- [Install with Nuget](#install-with-nuget)
-- [Getting Started](#getting-started) 
+- [About this Project](https://github.com/dglambert/sitecoreannotatable#about-the-project)
+- [Install with Nuget](https://github.com/dglambert/sitecoreannotatable#install-with-nuget)
+- [Getting Started](https://github.com/dglambert/sitecoreannotatable#getting-started) 
 
 ## About The Project
 
@@ -24,7 +24,7 @@ You can install the framework via [NuGet](https://www.nuget.org/packages/dglambe
 PM> Install-Package dglambert.SitecoreAnnotatable
 ```
 
-For information about configuring, see the [Getting Started](#Getting-started) section below.
+For information about configuring, see the [Getting Started](https://github.com/dglambert/sitecoreannotatable#Getting-started) section below.
 
 
 ## Getting Started
