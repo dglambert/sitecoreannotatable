@@ -53,12 +53,11 @@ In your IOC container, you will need to register two additional services, `ICont
 
 ## Compatibility
 
-- **Sitecore 8.2.7** [Verified Working]
-
 As the original intention of this project was for my own use, I did not spend time testing this on any installations other that 8.2.7. 
 
-If you are interested in trying it out and would like to contribute by testing against your installation, please let me know if it works and I will update this list as users report expanded compatibility. 
+- **Sitecore 8.2.7** [Verified Working]
 
+If you are interested in testing it out and would like to contribute, please let me know if it works and I will update this list as additional users report expanded compatibility. 
 
 
 ## Contributing
