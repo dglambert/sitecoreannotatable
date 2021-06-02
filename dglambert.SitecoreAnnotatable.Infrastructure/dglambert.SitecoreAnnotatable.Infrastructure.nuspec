@@ -8,6 +8,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/dglambert/sitecoreannotatable</projectUrl>
+    <readme>README.md</readme>
     <description>$description$</description>
     <releaseNotes>
       v 1.0.0 
@@ -18,5 +19,6 @@
   </metadata>
   <files>
     <file src="App_Config\Include\Dglambert.SitecoreAnnotatable.config" target="content\App_Config\Include" />
+    <file src="..\README.md" target="" />
   </files>
 </package>
