@@ -5,6 +5,8 @@ A Library for automatically adding annotations to the markup of Sitecore Website
 - [About this Project](https://github.com/dglambert/sitecoreannotatable#about-the-project)
 - [Install with Nuget](https://github.com/dglambert/sitecoreannotatable#install-with-nuget)
 - [Getting Started](https://github.com/dglambert/sitecoreannotatable#getting-started) 
+- [Compatibility](https://github.com/dglambert/sitecoreannotatable#compatibility)
+- [Roadmap](https://github.com/dglambert/sitecoreannotatable#roadmap)
 - [Contributing](https://github.com/dglambert/sitecoreannotatable#contributing)
 - [Contact Me](https://github.com/dglambert/sitecoreannotatable#contact-me)
 
@@ -59,6 +61,9 @@ As the original intention of this project was for my own use, I did not spend ti
 
 If you are interested in testing it out and would like to contribute, please let me know if it works and I will update this list as additional users report expanded compatibility. 
 
+## Roadmap
+
+See the [open issues](https://github.com/dglambert/sitecoreannotatable/issues) for a list of proposed features and known issues.
 
 ## Contributing
 
