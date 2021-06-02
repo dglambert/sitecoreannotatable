@@ -1,4 +1,5 @@
 # SitecoreAnnotatable
+
 A Library for automatically adding annotations to the markup of Sitecore Websites.
 
 - [About this Project](https://github.com/dglambert/sitecoreannotatable#about-the-project)
@@ -50,9 +51,20 @@ In your IOC container, you will need to register two additional services, `ICont
 ```
 
 
+## Compatibility
+
+- **Sitecore 8.2.7** [Verified Working]
+
+As the original intention of this project was for my own use, I did not spend time testing this on any installations other that 8.2.7. 
+
+If you are interested in trying it out and would like to contribute by testing against your installation, please let me know if it works and I will update this list as users report expanded compatibility. 
+
+
+
 ## Contributing
 
 If you encounter a bug or have a feature request, please use the [Issue Tracker](https://github.com/dglambert/sitecoreannotatable/issues/new). The project is also open to contributions, so feel free to fork the project and open pull requests.
+
 
 ## Contact Me
 
