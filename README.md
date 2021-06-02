@@ -22,10 +22,10 @@ With SitecoreAnnotatable you will:
 
 ## Install with NuGet
 
-You can install the framework via [NuGet](https://www.nuget.org/packages/dglambert.SitecoreAnnotatable/):
+You can install the framework via [NuGet](https://www.nuget.org/packages/dglambert.SitecoreAnnotatable.Infrastructure/):
 
 ``` powershell
-PM> Install-Package dglambert.SitecoreAnnotatable
+PM> Install-Package dglambert.SitecoreAnnotatable.Infrastructure
 ```
 
 For information about configuring, see the [Getting Started](https://github.com/dglambert/sitecoreannotatable#Getting-started) section below.
