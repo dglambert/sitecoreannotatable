@@ -4,6 +4,9 @@ A Library for automatically adding annotations to the markup of Sitecore Website
 - [About this Project](https://github.com/dglambert/sitecoreannotatable#about-the-project)
 - [Install with Nuget](https://github.com/dglambert/sitecoreannotatable#install-with-nuget)
 - [Getting Started](https://github.com/dglambert/sitecoreannotatable#getting-started) 
+- [Contributing](https://github.com/dglambert/sitecoreannotatable#contributing)
+- [Contact Me](https://github.com/dglambert/sitecoreannotatable#contact-me)
+
 
 ## About The Project
 
@@ -45,3 +48,12 @@ In your IOC container, you will need to register two additional services, `ICont
         }
     }
 ```
+
+
+## Contributing
+
+If you encounter a bug or have a feature request, please use the [Issue Tracker](https://github.com/dglambert/sitecoreannotatable/issues/new). The project is also open to contributions, so feel free to fork the project and open pull requests.
+
+## Contact Me
+
+If you have a question or comment you can DM me on the [Sitecore Community Slack Channel](https://sitecorechat.slack.com/app_redirect?channel=U48R1EDCG), [Twitter](https://twitter.com/dGleasonLambert), or [LinkedIn](https://www.linkedin.com/in/dglambert/)
