@@ -1,0 +1,18 @@
+trigger:
+- main
+
+name: $(majorMinorVersion).$(semanticVersion) # $(rev:r) # NOTE: rev resets when the default retention period expires
+
+
+pool:
+  vmImage: windows-latest
+
+variables:
+- name: semanticVersion
+  value: $[counter(variables['majorMinorVersion'], 0)]
+
+steps:
+
+- task: NuGetToolInstaller@1
+  displayName: 'Acquires a specific version of NuGet from the internet or the tools cache'
+
