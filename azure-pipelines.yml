@@ -1,0 +1,26 @@
+trigger:
+- main
+
+name: $(majorMinorVersion).$(semanticVersion) # $(rev:r) # NOTE: rev resets when the default retention period expires
+
+
+pool:
+  vmImage: windows-latest
+
+variables:
+- name: semanticVersion
+  value: $[counter(variables['majorMinorVersion'], 0)]
+- name: solution
+  value: 'dglambert.SitecoreAnnotatable.sln' 
+
+steps:
+
+- task: NuGetToolInstaller@1
+  displayName: 'Acquires a specific version of NuGet from the internet or the tools cache'
+
+- task: NuGetCommand@2
+  displayName: 'Restore Solution Package'
+  inputs:
+    command: 'restore'
+    restoreSolution: $(solution)
+    feedsToUse: 'config'
