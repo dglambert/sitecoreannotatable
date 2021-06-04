@@ -68,3 +68,4 @@ steps:
     packagesToPush: '$(build.artifactStagingDirectory)/*.nupkg'
     nuGetFeedType: 'external'
     publishFeedCredentials: 'dglambertNuget'
+    externalFeedCredentials: 'dglambertNuget'
