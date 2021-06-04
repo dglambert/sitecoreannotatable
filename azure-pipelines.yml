@@ -12,6 +12,10 @@ variables:
   value: $[counter(variables['majorMinorVersion'], 0)]
 - name: solution
   value: 'dglambert.SitecoreAnnotatable.sln' 
+- name: buildPlatform
+  value: 'Any CPU'  
+- name: buildConfiguration
+  value: 'Release' 
 
 steps:
 
@@ -24,3 +28,21 @@ steps:
     command: 'restore'
     restoreSolution: $(solution)
     feedsToUse: 'config'
+
+- task: VSBuild@1
+  displayName: 'Solution Build'
+  inputs:
+    solution: $(solution)
+    platform: $(buildPlatform)
+    configuration: $(buildConfiguration)
+  
+- task: VSTest@2
+  displayName: 'Run Tests'
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\dglambert.SitecoreAnnotatable.Tests.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(build.sourcesdirectory)'
+    codeCoverageEnabled: true
