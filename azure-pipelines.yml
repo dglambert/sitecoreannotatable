@@ -55,3 +55,13 @@ steps:
     command: 'pack'
     packagesToPack: '$(nuspecPath)'
     versioningScheme: 'byBuildNumber'
+
+- task: NuGetAuthenticate@0
+  displayName: 'NuGet Authenticate'
+
+- task: NuGetCommand@2
+  displayName: 'Push Package'
+  inputs:
+    command: 'push'
+    packagesToPush: '$(build.artifactStagingDirectory)/*.nupkg'
+    nuGetFeedType: 'external'
