@@ -1,4 +1,5 @@
 # SitecoreAnnotatable
+![Nuget](https://img.shields.io/nuget/v/dglambert.sitecoreannotatable.infrastructure)
 [![Build Status](https://dev.azure.com/dglambert/SitecoreAnnotatable/_apis/build/status/dglambert.sitecoreannotatable?branchName=main)](https://dev.azure.com/dglambert/SitecoreAnnotatable/_build/latest?definitionId=1&branchName=main)
 ![Azure DevOps tests](https://img.shields.io/azure-devops/tests/dglambert/SitecoreAnnotatable/1)
 
