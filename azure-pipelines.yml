@@ -24,7 +24,7 @@ steps:
 - task: NuGetToolInstaller@1
   displayName: 'Acquires a specific version of NuGet from the internet or the tools cache'
   inputs:
-    versionSpec: 5.10.0
+    versionSpec: 5.10.0-preview.2
 
 - task: NuGetCommand@2
   displayName: 'Restore Solution Package'
@@ -51,9 +51,17 @@ steps:
     searchFolder: '$(build.sourcesdirectory)'
     codeCoverageEnabled: true
 
-- task: NuGetCommand@2
-  displayName: 'Pack Nuspec'
+# - task: NuGetCommand@2
+#   displayName: 'Pack Nuspec'
+#   inputs:
+#     command: 'pack'
+#     packagesToPack: '$(nuspecPath)'
+#     versioningScheme: 'byBuildNumber'
+
+- task: DotNetCoreCLI@2
+  displayName: 'NuGet pack'
   inputs:
     command: 'pack'
-    packagesToPack: '$(nuspecPath)'
+    packDirectory: '$(build.sourcesdirectory)'
     versioningScheme: 'byBuildNumber'
+    buildProperties: 'NuspecFile=$(nuspecPath)'
