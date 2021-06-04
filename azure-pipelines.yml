@@ -16,6 +16,8 @@ variables:
   value: 'Any CPU'  
 - name: buildConfiguration
   value: 'Release' 
+- name: nuspecPath
+  value: '$(build.sourcesdirectory)\dglambert.SitecoreAnnotatable.Infrastructure\dglambert.SitecoreAnnotatable.Infrastructure.nuspec'  
 
 steps:
 
@@ -46,3 +48,10 @@ steps:
       !**\obj\**
     searchFolder: '$(build.sourcesdirectory)'
     codeCoverageEnabled: true
+
+- task: NuGetCommand@2
+  displayName: 'Pack Nuspec'
+  inputs:
+    command: 'pack'
+    packagesToPack: '$(nuspecPath)'
+    versioningScheme: 'byBuildNumber'
