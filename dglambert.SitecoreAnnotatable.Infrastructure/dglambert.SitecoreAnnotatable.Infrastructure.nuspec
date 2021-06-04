@@ -3,18 +3,18 @@
   <metadata>
     <id>dglambert.SitecoreAnnotatable.Infrastructure</id>
     <version>1.0.0</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
+    <title>dglambert.SitecoreAnnotatable</title>
+    <authors>Devin Gleason-Lambert</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/dglambert/sitecoreannotatable</projectUrl>
     <!--<readme>README.md</readme>-->
-    <description>$description$</description>
+    <description>A Library for automatically adding annotations to the markup of Sitecore Websites.</description>
     <releaseNotes>
       v 1.0.0 
       - Initial Release 
     </releaseNotes>
-    <copyright>$copyright$</copyright>
+    <copyright>Copyright ©  2021</copyright>
     <tags>Sitecore Annotation Annotate Markup Renderings</tags>
   </metadata>
   <files>
