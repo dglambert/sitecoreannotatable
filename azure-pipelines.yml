@@ -49,18 +49,9 @@ steps:
     searchFolder: '$(build.sourcesdirectory)'
     codeCoverageEnabled: true
 
-# - task: NuGetCommand@2
-#   displayName: 'Pack Nuspec'
-#   inputs:
-#     command: 'pack'
-#     packagesToPack: '$(nuspecPath)'
-#     versioningScheme: 'byBuildNumber'
-
-- task: DotNetCoreCLI@2
-  displayName: 'NuGet pack'
+- task: NuGetCommand@2
+  displayName: 'Pack Nuspec'
   inputs:
     command: 'pack'
-    packagesToPack: '**/dglambert.SitecoreAnnotatable.Infrastructure.csproj'
-    packDirectory: '$(build.sourcesdirectory)'
+    packagesToPack: '$(nuspecPath)'
     versioningScheme: 'byBuildNumber'
-    buildProperties: 'NuspecFile=$(nuspecPath)'
