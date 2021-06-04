@@ -17,7 +17,7 @@ variables:
 - name: buildConfiguration
   value: 'Release' 
 - name: nuspecPath
-  value: '$(build.sourcesdirectory)\dglambert.SitecoreAnnotatable.Infrastructure\dglambert.SitecoreAnnotatable.Infrastructure.nuspec'  
+  value: '**\dglambert.SitecoreAnnotatable.Infrastructure.nuspec'  
 
 steps:
 
