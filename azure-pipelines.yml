@@ -49,9 +49,18 @@ steps:
     searchFolder: '$(build.sourcesdirectory)'
     codeCoverageEnabled: true
 
-- task: NuGetCommand@2
-  displayName: 'Pack Nuspec'
+# - task: NuGetCommand@2
+#   displayName: 'Pack Nuspec'
+#   inputs:
+#     command: 'pack'
+#     packagesToPack: '$(nuspecPath)'
+#     versioningScheme: 'byBuildNumber'
+
+- task: DotNetCoreCLI@2
+  displayName: 'NuGet pack'
   inputs:
     command: 'pack'
+    configuration: $(BuildConfiguration)
     packagesToPack: '$(nuspecPath)'
-    versioningScheme: 'byBuildNumber'
+    packDirectory: '$(build.sourcesdirectory)'
+    versioningScheme: byBuildNumber 
