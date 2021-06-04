@@ -8,7 +8,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/dglambert/sitecoreannotatable</projectUrl>
-    <readme>README.md</readme>
+    <!--<readme>README.md</readme>-->
     <description>$description$</description>
     <releaseNotes>
       v 1.0.0 
