@@ -60,6 +60,7 @@ steps:
   displayName: 'NuGet pack'
   inputs:
     command: 'pack'
+    packagesToPack: '**/dglambert.SitecoreAnnotatable.Infrastructure.csproj'
     packDirectory: '$(build.sourcesdirectory)'
     versioningScheme: 'byBuildNumber'
     buildProperties: 'NuspecFile=$(nuspecPath)'
