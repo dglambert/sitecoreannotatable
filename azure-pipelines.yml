@@ -24,7 +24,7 @@ steps:
 - task: NuGetToolInstaller@1
   displayName: 'Acquires a specific version of NuGet from the internet or the tools cache'
   inputs:
-    versionSpec: 5.10.0-preview.2
+    versionSpec: 5.10.0
 
 - task: NuGetCommand@2
   displayName: 'Restore Solution Package'
