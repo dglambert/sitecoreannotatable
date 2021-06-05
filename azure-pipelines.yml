@@ -62,6 +62,7 @@ steps:
 
 - task: NuGetCommand@2
   displayName: 'Push Package'
+  condition: and(succeeded(), eq(variables.NugetPush, 'true'))
   inputs:
     command: 'push'
     packagesToPush: '$(build.artifactStagingDirectory)/*.nupkg'
