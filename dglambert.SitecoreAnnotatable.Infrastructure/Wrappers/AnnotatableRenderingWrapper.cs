@@ -8,6 +8,7 @@ namespace dglambert.SitecoreAnnotatable.Infrastructure.Wrappers
     {
         public AnnotatableRenderingWrapper(TextWriter writer, IMarker marker) : base(writer, marker)
         {
+            //test
         }
     }
 }
