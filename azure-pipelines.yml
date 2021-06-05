@@ -31,6 +31,15 @@ steps:
     restoreSolution: $(solution)
     feedsToUse: 'config'
 
+- task: SonarCloudPrepare@1
+  displayName: 'Sonar Cloud Prepare Step for Analysis'
+  inputs:
+    SonarCloud: 'sonarcloud'
+    organization: 'dglambert'
+    scannerMode: 'MSBuild'
+    projectKey: 'dglambert_sitecoreannotatable'
+    projectName: 'dglambert'
+
 - task: VSBuild@1
   displayName: 'Solution Build'
   inputs:
@@ -48,6 +57,14 @@ steps:
       !**\obj\**
     searchFolder: '$(build.sourcesdirectory)'
     codeCoverageEnabled: true
+
+- task: SonarCloudAnalyze@1
+  displayName: 'Sonarcloud Analysis'
+
+- task: SonarCloudPublish@1
+  displayName: 'Publish Sonarcloud Report'
+  inputs:
+    pollingTimeoutSec: '300'
 
 - task: NuGetCommand@2
   displayName: 'Pack Nuspec'
