@@ -6,10 +6,10 @@ namespace dglambert.SitecoreAnnotatable.Infrastructure.Queries
 {
     public class GetDataSourceQuery : IGetDataSourceQuery
     {
-        Database _database;
+        readonly Database _database;
         public GetDataSourceQuery(Database database)
         {
-            _database = database ?? throw new ArgumentNullException("database must be a non-null value.");
+            _database = database ?? throw new ArgumentNullException(nameof(database));
         }
 
         public string GetDataSourceItemPath(Guid id)
