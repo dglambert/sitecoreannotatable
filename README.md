@@ -1,7 +1,25 @@
 # SitecoreAnnotatable
 ![Nuget](https://img.shields.io/nuget/v/dglambert.sitecoreannotatable.infrastructure)
 [![Build Status](https://dev.azure.com/dglambert/SitecoreAnnotatable/_apis/build/status/dglambert.sitecoreannotatable?branchName=main)](https://dev.azure.com/dglambert/SitecoreAnnotatable/_build/latest?definitionId=1&branchName=main)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=alert_status)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
+
+
 ![Azure DevOps tests](https://img.shields.io/azure-devops/tests/dglambert/SitecoreAnnotatable/1)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=coverage)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
+
+
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=bugs)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=code_smells)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=ncloc)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=security_rating)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
+
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=dglambert_sitecoreannotatable&metric=sqale_index)](https://sonarcloud.io/dashboard?id=dglambert_sitecoreannotatable)
 
 A Library for automatically adding annotations to the markup of Sitecore Websites.
 
