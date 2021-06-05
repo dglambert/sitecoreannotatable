@@ -48,7 +48,7 @@ namespace dglambert.SitecoreAnnotatable.Tests.Queries
             var id = ID.NewID;
             var templateId = ID.NewID;
             var def = new ItemDefinition(id, "fake", templateId, ID.Null);
-            var data = new ItemData(def, Language.Parse("en"), new Sitecore.Data.Version(1), new FieldList());
+            var data = new ItemData(def, Language.Parse("en"), Sitecore.Data.Version.Parse(1), new FieldList());
 
             Mock<Database> mockDB = new Mock<Database>();
             Database providedDatabase = mockDB.Object;
