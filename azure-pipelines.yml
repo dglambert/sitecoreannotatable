@@ -55,6 +55,7 @@ steps:
     command: 'pack'
     packagesToPack: '$(nuspecPath)'
     versioningScheme: 'byBuildNumber'
+    configuration: $(buildConfiguration)
 
 - task: NuGetAuthenticate@0
   displayName: 'NuGet Authenticate'
